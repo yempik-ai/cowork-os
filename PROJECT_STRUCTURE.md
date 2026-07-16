@@ -69,6 +69,10 @@ Review operative ricorrenti, una per file datato:
 
 I file `*.TEMPLATE.md` sono gli stampi da copiare.
 
+## `workflows/`
+
+Workflow trasversali — metodi che l'agente **esegue**, non cartelle da riempire: il **Relentless Outcome Workflow** (`workflows/relentless_outcome_workflow.md`, per le missioni) e il **Verification Gate** (`workflows/verification_gate.md`, la Definition of Done che verifica un deliverable prima del Memory Update). Il Verification Gate è opt-in: si attiva in setup.
+
 ## `missions/`
 
 Missioni ambiziose gestite col **Relentless Outcome Workflow** (`workflows/relentless_outcome_workflow.md`): perseguono un *outcome*, non un task. Una sottocartella per missione; `_TEMPLATE/` è lo stampo.

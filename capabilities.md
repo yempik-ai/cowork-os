@@ -73,6 +73,13 @@
 - **Creates:** `decisions/decision_candidates.md`, `decisions/active_decisions.md`, `decisions/decision_radar.md`, the `signals/` folder (email/Slack/Notion/Drive ingestion, private/gitignored).
 - **Needs:** email connector (read) + Slack connector (read) — both are full read sources. **Optional:** Notion (read) + Google Drive (read) add doc-change detection (the sweep flags edited pages/files in the pages/folders you tell it to watch, surfaced in the brief). If a connector isn't connected yet, the sweep skips it and flags it, without failing.
 
+### 🚩 Verification Gate — Definition of Done
+- **What:** a pre-"done" check for any deliverable that goes to a client or drives a decision (proposal, deck, report, LinkedIn post, send-list). Before it counts as *done*, Claude proves it: every fact reconciled to a real source, every number cited, every `{{placeholder}}` resolved, facts/assumptions/recommendations separated, and whatever is still unverified declared out loud → a **PASS / BLOCK** verdict. Catches the fabricated stat, the leftover placeholder and the uncited claim **before** they ship. Runs right before the Memory Update.
+- **Trigger:** the user produces client-facing or decision-driving deliverables — i.e. almost everyone. Especially when they say *"it looked done but a number was wrong"*, worry about credibility, or send things out under their own name.
+- **Ask at setup — don't auto-enable.** During the interview, offer it explicitly: *"Want a verification pass before deliverables are called done?"* On **yes**, add one line to the user's **own** `PROJECT_INSTRUCTIONS.md` so the gate runs automatically before the Memory Update; on **no**, keep it on-demand (*"run the verification gate on this"*). Default off until they choose — never force it into the kit's system prompt.
+- **Creates / uses:** [`workflows/verification_gate.md`](./workflows/verification_gate.md); optionally one line in the user's `PROJECT_INSTRUCTIONS.md`. Worked example: `examples/yempik/reviews/verification-linkedin-post.md`.
+- **Complements** the technical `verification` skill (which proves *code* works): this gate is the business-deliverable twin — prose, decks, posts, proposals — with no install.
+
 ---
 
 ## 3. Scheduled automations (recurring — explain, then offer to set up)
@@ -139,4 +146,5 @@
 - *"Someone key is leaving" / "onboarding is slow" / "only one person knows how to do X"* → the **knowledge-transfer** interview (`/cowork-os:knowledge-transfer`).
 - *"Give me a strategy / GTM / growth / pricing plan" / "what should I do?"* → the **senior-strategy-architect** skill (diagnosis-first, explicit trade-offs, operating plan with metrics and risks).
 - *"We keep re-deciding / forgetting what we decided" / "decisions are all in email and Slack"* → Decision Lifecycle: `daily-signal-sweep-am/pm` + `decision-radar` (needs email read, ideally Slack read).
+- *"It looked done but a number/name/placeholder was wrong" / "I send things out under my name and can't afford errors"* → the **Verification Gate** (`workflows/verification_gate.md`). Offer it at setup; on yes add one line to `PROJECT_INSTRUCTIONS.md`, else keep it on-demand.
 - *Always* → Core + workspace-maintenance + the Memory Update habit.

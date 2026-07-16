@@ -194,7 +194,7 @@ cowork-os/
 ├── cowork.config.example.md     # every placeholder, in one place
 ├── GETTING_STARTED.md           # setup, both paths (EN + IT)
 ├── CONTRIBUTING.md
-├── workflows/                   # Relentless Outcome Workflow
+├── workflows/                   # Relentless Outcome · Verification Gate
 ├── context/                     # overview · positioning · services · tone of voice · processes
 ├── marketing/                   # strategy · campaigns · content
 ├── website/                     # notes · backlog · homepage copy
