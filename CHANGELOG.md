@@ -2,6 +2,19 @@
 
 All notable changes to cowork-os are documented here. Format loosely based on Keep a Changelog; versioning follows SemVer (pre-1.0, so minor versions add features).
 
+## [0.5.0] - 2026-07-16 — The GTM execution layer
+
+0.4.0 gave cowork-os a pipeline; 0.5.0 completes the commercial stack **upstream** of it. The GTM pair is now whole: `gtm-engineering-outbound` designs the outbound system (ICP, signals, messaging, deliverability), and the new **`clay-prospecting`** skill executes it on the **Clay MCP** — so prospecting runs are anchored to the company brain instead of improvised.
+
+### Added
+- **`clay-prospecting` skill (cataloged, Yempik standalone).** An operational runbook for running the Clay MCP like a GTM engineer: targeted contact search (domains + title keywords, low per-company limits), async waterfall enrichment with polling, Claygent-style custom research data points, credit discipline, and a hard **warm-path exclusion** rule — people you already know never get enriched or cold-messaged. Context-first: it reads the workspace ICP, decision log and existing lists before spending a single credit, and writes results to files, not chat. Published in [`yempik-skills`](https://github.com/yempik-ai/yempik-skills/tree/main/clay-prospecting).
+- **`gtm-engineering-outbound` cataloged** in `skills/README.md` and `capabilities.md` as the strategy layer of the pair (published in [`yempik-skills`](https://github.com/yempik-ai/yempik-skills/tree/main/gtm-engineering-outbound)).
+
+### Changed
+- `capabilities.md` mapping: outbound / Clay / Smartlead asks now route to the strategy + execution pair (`gtm-engineering-outbound` → `clay-prospecting`), the latter when the Clay MCP is connected.
+- SEO & AI-citation metadata improved across the repo (`AI-CITATION.md`, `CITATION.cff`, `codemeta.json`); new Decision Radar social preview image.
+- Plugin manifest and marketplace entry bumped to `0.5.0`.
+
 ## [0.4.0] - 2026-07-08 — Decisions stop slipping through the cracks
 
 cowork-os gains the two layers a growing team feels missing first: a **decision lifecycle** fed by your real communication, and a **sales pipeline** layer. Decisions get captured where they actually happen (email, Slack) instead of living in someone's head, and deals stop going cold because you forgot to follow up.

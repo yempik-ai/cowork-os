@@ -111,6 +111,7 @@
 - **Bundled sales skill:** `pipeline-followup` prepares **draft** follow-up emails for CRM deals gone quiet — reads the deal's Gmail thread + `pipeline/rules.md`, writes a Gmail draft in the person's voice, never sends. On-demand ("controlla la pipeline e preparami i follow-up"). Pairs with the `pipeline/` module + `pipeline-deal-radar`.
 - **Named skills the user may already have** (use them if installed, otherwise tell the user they exist — see `skills/README.md`):
   - `gtm-engineering-outbound` → ICP, signal maps, Clay-style list building, AI prospecting, cold email/LinkedIn, deliverability, reply handling, and weekly GTM review;
+  - `clay-prospecting` → running the Clay MCP like a GTM engineer: targeted contact search, async enrichment, custom research data points, credit discipline, warm-path exclusion (the execution layer under `gtm-engineering-outbound`);
   - `document-data-extractor` → turning documents / invoices / receipts into a spreadsheet;
   - `validation-outreach` → cold messages to book discovery interviews;
   - `verification` → proving a technical task actually works before calling it done;
@@ -131,7 +132,7 @@
 - *"I manage deals in a CRM / Pipedrive" / "deals go cold and I forget to follow up" / "I want an assistant on my pipeline"* → `pipeline/` + `pipeline-deal-radar` (feeds the daily brief) + the `pipeline-followup` skill. Set the rules via a focused `knowledge-transfer` session on the sales process — don't invent thresholds. Needs a CRM connector (read) + Gmail (drafts). **For a solo salesperson, don't stack three morning routines:** the `founder-daily-brief` already regenerates the pipeline inline from `pipeline/rules.md`, so scheduling *just the brief* is usually enough — add the standalone `pipeline-deal-radar` only if they want the fuller radar artifact or have heavy/multiple pipelines. And check first which channel their deals actually live in: if follow-ups happen mostly on WhatsApp/phone, say up front the skill (Gmail-only) can't see those — don't imply full coverage.
 - *"I live in Google + Notion" / "tell me if a doc changed"* → founder-daily-brief + the signal sweep with Notion/Drive change-detection (tell it which pages/folders to watch).
 - *"I want to land [big partner / dream client]"* → missions/ + mission-weekly-review.
-- *"I do outbound / cold email / AI prospecting" / "I use Clay or Smartlead" / "I need ICP signals or deliverability"* → the `gtm-engineering-outbound` skill.
+- *"I do outbound / cold email / AI prospecting" / "I use Clay or Smartlead" / "I need ICP signals or deliverability"* → the `gtm-engineering-outbound` skill (strategy) + the `clay-prospecting` skill when the Clay MCP is connected (execution: enrichment runs, prospect lists, verified emails).
 - *"I do outreach for discovery interviews"* → linkedin-connection-batch and/or the validation-outreach skill.
 - *"I want a morning brief / a chief-of-staff"* → founder-daily-brief.
 - *"I have a pile of unsorted material"* → the `_inbox/` intake flow ("process the inbox").

@@ -11,7 +11,7 @@
       "displayName": "cowork-os",
       "source": "./plugins/cowork-os",
       "description": "Turn a Claude Cowork project into a company brain your team owns: guided setup, a Memory Update protocol, a knowledge-transfer interview, a senior strategy skill, a decision lifecycle with signal sweeps and a weekly Decision Radar, a sales/pipeline follow-up layer, a LinkedIn editor, mission mode, and recurring routines.",
-      "version": "0.4.0",
+      "version": "0.5.0",
       "author": {
         "name": "Yempik",
         "url": "https://yempik.com"
