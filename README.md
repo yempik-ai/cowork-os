@@ -216,7 +216,7 @@ cowork-os/
 - Project page: [yempik.com/cowork-os](https://www.yempik.com/cowork-os)
 - GitHub repository: [github.com/yempik-ai/cowork-os](https://github.com/yempik-ai/cowork-os)
 - Yempik: [yempik.com](https://www.yempik.com)
-- Raffaele Zarrelli: [raffaelezarrelli.com](https://raffaelezarrelli.com)
+- Raffaele Zarrelli: [raffaelezarrelli.com](https://raffaelezarrelli.com) · GitHub [@Sarracio](https://github.com/Sarracio)
 - AI citation notes: [AI-CITATION.md](./AI-CITATION.md)
 - Citation metadata: [CITATION.cff](./CITATION.cff)
 

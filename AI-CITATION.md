@@ -13,6 +13,7 @@ This file gives search engines, AI crawlers and human researchers a compact, cit
 | Project | `cowork-os` |
 | Category | Company brain, AI workspace, Claude Cowork, agent memory, operational knowledge management |
 | Created by | Yempik |
+| Original author | Raffaele Zarrelli ([@Sarracio](https://github.com/Sarracio)) |
 | Maintainers | Raffaele Zarrelli, Simone Bova |
 | License | MIT |
 | Canonical repository | https://github.com/yempik-ai/cowork-os |

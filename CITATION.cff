@@ -5,6 +5,7 @@ type: software
 authors:
   - family-names: Zarrelli
     given-names: Raffaele
+    alias: Sarracio
     website: "https://raffaelezarrelli.com"
   - family-names: Bova
     given-names: Simone
