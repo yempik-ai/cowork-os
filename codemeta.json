@@ -28,6 +28,7 @@
       "givenName": "Raffaele",
       "familyName": "Zarrelli",
       "url": "https://raffaelezarrelli.com",
+      "sameAs": "https://github.com/Sarracio",
       "affiliation": {
         "@type": "Organization",
         "name": "Yempik",
